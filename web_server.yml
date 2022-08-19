@@ -1,0 +1,11 @@
+---
+- name: making apache web server
+  hosts: web_server
+  become: true
+
+  tasks:
+
+  - name: install apache2
+    apt: 
+      name: apache2 
+      state: present 
