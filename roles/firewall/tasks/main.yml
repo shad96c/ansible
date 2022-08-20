@@ -1,0 +1,6 @@
+- name: open port 80
+  ufw: 
+    rule: allow
+    port: '80'
+    proto: tcp
+    

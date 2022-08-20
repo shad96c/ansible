@@ -9,3 +9,21 @@
     apt: 
       name: apache2 
       state: present 
+
+  - name: start apache2
+    service: 
+      name: apache2
+      state: started 
+      enabled: yes 
+
+  - name: open port 80
+    ufw: 
+      rule: allow
+      port: '80' 
+      proto: tcp
+      
+  
+  - name: create a user
+    user: 
+      name: shad
+      group: shad

@@ -1,0 +1,11 @@
+---
+- name: installing apache 2, open port 80, creating a user
+  hosts: web_server
+  become: true
+
+  roles: 
+    - http 
+    - firewall
+    - user
+    
+
