@@ -7,12 +7,12 @@
 
   - name: install apache2
     apt: 
-      name: apache2 
+      name: "{{ package_name }}"
       state: present 
 
   - name: start apache2
     service: 
-      name: apache2
+      name: "{{ package_name }}"
       state: started 
       enabled: yes 
 
@@ -25,5 +25,5 @@
   
   - name: create a user
     user: 
-      name: shad
-      group: shad
+      name: "{{ user_name }}"
+      group: admin 
